@@ -1,0 +1,49 @@
+.whiteAttachIcon .purpleAttachIcon{
+  width: 24px;
+  position: relative;
+  height: 24px;
+}
+.purpleAttachIcon {
+  display: none;
+}
+.placeholder {
+  position: relative;
+  line-height: 100%;
+}
+.fileUpload {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 18px;
+  gap: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: Roboto;
+}
+.fileUpload:hover {
+  border: 1px solid #a41cf7;
+  box-sizing: border-box;
+}
+.fileUpload:hover .placeholder {
+  color: #a41cf7;
+}
+.fileUpload:hover .whiteAttachIcon {
+  display: none;
+}
+.fileUpload:hover .purpleAttachIcon {
+  display: unset;
+}
+.iconwrapper {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.delete {
+  background-image: url(/public/delete.svg);
+}

@@ -1,0 +1,146 @@
+.imageIcon {
+  width: 68px;
+  position: relative;
+
+  border-radius: 50%;
+  height: 68px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.icon,
+.imageIcon,
+.rating {
+  position: relative;
+}
+
+.icon {
+  width: 11.6px;
+  position: relative;
+
+  height: 11.2px;
+}
+
+.rating {
+  position: relative;
+
+  line-height: 100%;
+}
+
+.avatar,
+.ratingcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ratingcontainer {
+  margin: 0 !important;
+  position: absolute;
+  bottom: -4px;
+  left: calc(50% - 19.3px);
+  border-radius: 16px;
+  background-color: #a41cf7;
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 3px 4px;
+  gap: 2px;
+  z-index: 1;
+}
+
+.avatar {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+.description,
+.name {
+  align-self: stretch;
+  position: relative;
+}
+
+.description {
+  align-self: stretch;
+  position: relative;
+
+  font-size: 14px;
+  line-height: 130%;
+  color: #c5b7cc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+.hire {
+  position: relative;
+  font-size: 15px;
+  line-height: 130%;
+  color: #a41cf7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hire:hover {
+
+  font-weight: 700;
+  font-family: Roboto;
+}
+
+.container,
+.designerCard {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+  font-size: 18px;
+}
+
+.designerCard {
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #443C4B;
+  box-sizing: border-box;
+  height: 99px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 14px 14px 17px;
+  gap: 10px;
+  min-width: 280px;
+  text-align: left;
+  font-size: 12px;
+  color: #fff;
+  font-family: Roboto;
+}
+
+.designerCard:hover {
+  border: 1px solid #a41cf7;
+  box-sizing: border-box;
+}

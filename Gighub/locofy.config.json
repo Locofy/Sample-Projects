@@ -1,0 +1,11 @@
+{
+  "components": [
+    "./src/components/DesignerCard.tsx",
+    "./src/components/FileUpload.tsx",
+    "./src/components/FilterType.tsx",
+    "./src/components/Footer.tsx",
+    "./src/components/GigCard.tsx",
+    "./src/components/Header.tsx",
+    "./src/components/ReviewCard.tsx"
+  ]
+}

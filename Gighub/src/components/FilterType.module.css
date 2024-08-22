@@ -1,0 +1,32 @@
+.icon,
+.text {
+  position: relative;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.text {
+  line-height: 100%;
+  display: flex;
+  width: max-content;
+}
+.filterType {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  gap: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: Roboto;
+}
+.filterType:hover {
+  background-color: #a41cf7;
+  border: 1px solid #a41cf7;
+  box-sizing: border-box;
+}

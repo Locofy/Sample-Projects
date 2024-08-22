@@ -1,0 +1,193 @@
+.logoIcon,
+.logoicon {
+  width: 110.5px;
+  position: relative;
+  height: 29.5px;
+  object-fit: cover;
+}
+.logoicon {
+  width: 30.5px;
+  height: 29px;
+  display: none;
+}
+.logoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  gap: 6px;
+  min-width: 130px;
+  max-width: 300px;
+}
+.iconamoonsearch,
+.placeholder {
+  position: relative;
+  overflow: hidden;
+}
+.placeholder {
+  border: 0;
+  outline: 0;
+  font-family: Roboto;
+  font-size: 13px;
+  background-color: transparent;
+  flex: 1;
+  color: #6f6773;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.iconamoonsearch {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.icon {
+  cursor: pointer;
+  border: 0;
+  padding: 8px;
+  background-color: #a41cf7;
+  border-radius: 4px;
+  flex-direction: row;
+  align-items: center;
+}
+.icon:hover {
+  background-color: rgba(164, 28, 247, 0.8);
+}
+.icon,
+.input,
+.inputContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+.input {
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: #2f2934;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 6px 6px 14px;
+  gap: 10px;
+}
+.inputContainer {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  min-width: 280px;
+  max-width: 600px;
+}
+.imAnEmployer {
+  flex: 1;
+  position: relative;
+  line-height: 100%;
+}
+.chevronChild {
+  width: 9px;
+  position: relative;
+  border-radius: 0.5px;
+  height: 4.5px;
+}
+.chevron,
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chevron {
+  width: 6px;
+  height: 13px;
+  flex-direction: column;
+}
+.dropdown {
+  width: 140px;
+  border-radius: 8px;
+  background-color: #2f2934;
+  flex-direction: row;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  gap: 6px;
+  cursor: pointer;
+}
+.dropdown:hover {
+  background-color: rgba(47, 41, 52, 0.8);
+}
+.mailIcon {
+  width: 20px;
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.dropdownParent,
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.dropdownParent {
+  gap: 25px;
+}
+.avatarIcon {
+  width: 36px;
+  position: relative;
+  height: 36px;
+}
+.ctaContainer {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 25px;
+}
+.container,
+.ctaContainer,
+.header {
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 1320px;
+}
+.header {
+  align-self: stretch;
+  background-color: #171619;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+  text-align: left;
+  font-size: 13px;
+  color: #fff;
+  font-family: Roboto;
+}
+@media screen and (max-width: 800px) {
+  .logoContainer {
+    width: auto;
+    align-self: unset;
+    min-width: unset;
+    flex: unset;
+  }
+  .dropdownParent {
+    display: none;
+  }
+  .container {
+    row-gap: 12px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .logoIcon {
+    display: none;
+  }
+  .logoicon {
+    display: flex;
+  }
+}

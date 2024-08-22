@@ -1,0 +1,100 @@
+.avatarIcon,
+.imageIcon {
+  position: relative;
+  object-fit: cover;
+}
+.imageIcon {
+  align-self: stretch;
+  border-radius: 8px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 107px;
+  flex-shrink: 0;
+}
+.avatarIcon {
+  width: 20px;
+  border-radius: 50%;
+  height: 20px;
+}
+.name {
+  flex: 1;
+  position: relative;
+  line-height: 130%;
+}
+.userContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.vectorIcon {
+  width: 14.8px;
+  position: relative;
+  height: 14.3px;
+}
+.rating {
+  position: relative;
+  line-height: 130%;
+}
+.ratingContainer,
+.topSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ratingContainer {
+  justify-content: flex-start;
+  gap: 4px;
+}
+.topSection {
+  align-self: stretch;
+  justify-content: space-between;
+}
+.description {
+  align-self: stretch;
+  position: relative;
+  line-height: 130%;
+}
+.contentSection {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.price {
+  align-self: stretch;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  font-family: Assistant;
+}
+.container,
+.gigCard {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+}
+.gigCard {
+  border-radius: 8px;
+  background-color: #2a292a;
+  padding: 12px;
+  box-sizing: border-box;
+  gap: 12px;
+  min-width: 240px;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: Roboto;
+  cursor: pointer;
+}
+.gigCard:hover {
+  background-color: #373737;
+}

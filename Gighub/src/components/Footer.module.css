@@ -1,0 +1,73 @@
+.logoWhiteIcon {
+  width: 110.5px;
+  position: relative;
+  height: 29.5px;
+  object-fit: cover;
+}
+.logocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px 0 0;
+}
+.copyrightText {
+  position: relative;
+  line-height: 100%;
+}
+.facebookLinkIcon,
+.linkedinLinkIcon,
+.twitterLinkIcon,
+.youtubeLinkIcon {
+  width: 26px;
+  position: relative;
+  height: 27px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.facebookLinkIcon,
+.linkedinLinkIcon,
+.twitterLinkIcon {
+  height: 26px;
+}
+.facebookLinkIcon,
+.twitterLinkIcon {
+  width: 27px;
+}
+.facebookLinkIcon {
+  width: 26px;
+  object-fit: cover;
+}
+.socialMediaLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10.3px;
+}
+.container,
+.footer {
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 1320px;
+  row-gap: 12px;
+}
+.footer {
+  align-self: stretch;
+  border-top: 1px solid #2f2934;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 0;
+  text-align: left;
+  font-size: 14px;
+  color: #6f6773;
+  font-family: Roboto;
+}
