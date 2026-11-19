@@ -1,40 +1,27 @@
 import { FunctionComponent } from "react";
+import { Star } from "lucide-react";
+import { Review } from "../store/useGigHubStore";
 import styles from "./ReviewCard.module.css";
 
-export type ReviewCardType = {
-  className?: string;
-  userName?: string;
-  userLocation?: string;
-  review?: string;
-  rating?: string;
-  avatarImage?: string;
-};
+export type ReviewCardType = { review: Review; className?: string };
 
 const ReviewCard: FunctionComponent<ReviewCardType> = ({
+  review,
   className = "",
-  userName = "Name",
-  userLocation = "United States",
-  review = "Review",
-  rating = "0.0",
-  avatarImage = "/avatar-image@2x.png",
-}) => {
-  return (
-    <div className={[styles.reviewCard, className].join(" ")}>
-      <div className={styles.topContainer}>
-        <img className={styles.avatarImageIcon} alt="" src={avatarImage} />
-        <div className={styles.contentContainer}>
-          <div className={styles.name}>{userName}</div>
-          <div className={styles.location}>{userLocation}</div>
-        </div>
-        <div className={styles.ratingContainer}>
-          <img className={styles.starIcon} alt="" src="/star-icon.svg" />
-          <div className={styles.rating}>{rating}</div>
-        </div>
+}) => (
+  <article className={[styles.reviewCard, className].join(" ")}>
+    <div className={styles.topContainer}>
+      <img className={styles.avatarImageIcon} alt="" src={review.avatar} />
+      <div className={styles.contentContainer}>
+        <strong>{review.name}</strong>
+        <span>{review.location}</span>
       </div>
-      <div className={styles.review}>{review}</div>
+      <span className={styles.ratingContainer}>
+        <Star size={11} fill="currentColor" /> {review.rating.toFixed(1)}
+      </span>
     </div>
-  );
-};
+    <p className={styles.review}>{review.text}</p>
+  </article>
+);
 
 export default ReviewCard;
-

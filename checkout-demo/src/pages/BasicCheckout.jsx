@@ -81,13 +81,17 @@ export default function BasicCheckout() {
           <div>
             <div className="co-card">
               <h3>Order Summary (1 item)</h3>
+              <img className="co-banner-img" src={product.img} alt="" />
+              <div className="co-item">
+                <div>{product.name}<div className="co-note">SKU: AWH-2291-BLK · Qty: 1</div></div>
+                <span>${product.price}.00</span>
+              </div>
               <table><tbody>
-                <tr><td>{product.name}<div className="co-note">SKU: AWH-2291-BLK · Qty: 1</div></td><td>${product.price}.00</td></tr>
                 <tr><td>Subtotal</td><td>${product.price}.00</td></tr>
                 <tr><td>Shipping</td><td>$12.99</td></tr>
                 <tr><td>Estimated Tax</td><td>${tax}</td></tr>
                 <tr><td>Handling Fee</td><td>$4.99</td></tr>
-                <tr className="total"><td>Total</td><td>${total}</td></tr>
+                <tr className="co-total"><td>Total</td><td>${total}</td></tr>
               </tbody></table>
               <div className="co-inline"><input placeholder="Promo code" /><button type="button" className="co-btn">Apply</button></div>
             </div>

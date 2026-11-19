@@ -1,45 +1,54 @@
 import { FunctionComponent } from "react";
+import { Heart, Star } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Gig, useGigHubStore } from "../store/useGigHubStore";
 import styles from "./GigCard.module.css";
 
 export type GigCardType = {
+  gig: Gig;
   className?: string;
-  image?: string;
-  avatar?: string;
-  userName?: string;
-  rating?: string;
-  price?: string;
-  description?: string;
 };
 
-const GigCard: FunctionComponent<GigCardType> = ({
-  className = "",
-  image = "/image2@2x.png",
-  avatar = "/avatar1@2x.png",
-  userName = "Name",
-  rating = "0.0",
-  price = "$0.00",
-  description = "Description",
-}) => {
+const GigCard: FunctionComponent<GigCardType> = ({ gig, className = "" }) => {
+  const favoriteIds = useGigHubStore((state) => state.favoriteIds);
+  const toggleFavorite = useGigHubStore((state) => state.toggleFavorite);
+  const isFavorite = favoriteIds.includes(gig.id);
+
   return (
-    <div className={[styles.gigCard, className].join(" ")}>
-      <img className={styles.imageIcon} alt="" src={image} />
-      <div className={styles.container}>
-        <div className={styles.contentSection}>
-          <div className={styles.topSection}>
-            <div className={styles.userContainer}>
-              <img className={styles.avatarIcon} alt="" src={avatar} />
-              <div className={styles.name}>{userName}</div>
-            </div>
-            <div className={styles.ratingContainer}>
-              <img className={styles.vectorIcon} alt="" src="/vector.svg" />
-              <div className={styles.rating}>{rating}</div>
-            </div>
-          </div>
-          <div className={styles.description}>{description}</div>
+    <article className={[styles.gigCard, className].join(" ")}>
+      <Link className={styles.imageWrap} to={`/gig/${gig.id}`}>
+        <img className={styles.imageIcon} alt="" src={gig.image} />
+        <span className={styles.category}>{gig.category}</span>
+        <button
+          className={[
+            styles.favoriteButton,
+            isFavorite ? styles.favoriteActive : "",
+          ].join(" ")}
+          onClick={(event) => {
+            event.preventDefault();
+            toggleFavorite(gig.id);
+          }}
+          aria-label={isFavorite ? "Remove from saved gigs" : "Save gig"}
+        >
+          <Heart size={16} fill={isFavorite ? "currentColor" : "none"} />
+        </button>
+      </Link>
+      <Link className={styles.content} to={`/gig/${gig.id}`}>
+        <div className={styles.sellerRow}>
+          <img className={styles.avatarIcon} alt="" src={gig.avatar} />
+          <span>{gig.seller}</span>
+          <span className={styles.verified}>✓</span>
+          <span className={styles.rating}>
+            <Star size={13} fill="currentColor" /> {gig.rating.toFixed(1)}
+          </span>
         </div>
-        <b className={styles.price}>{price}</b>
-      </div>
-    </div>
+        <h3>{gig.title}</h3>
+        <div className={styles.meta}>
+          <span>{gig.delivery}</span>
+          <strong>From ${gig.price}</strong>
+        </div>
+      </Link>
+    </article>
   );
 };
 

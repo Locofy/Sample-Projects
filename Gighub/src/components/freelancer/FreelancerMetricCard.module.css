@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+  min-height: 126px;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(48, 40, 56, 0.94),
+    rgba(32, 28, 36, 0.96)
+  );
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 11px;
+}
+.icon svg {
+  width: 18px;
+}
+.purple {
+  background: rgba(164, 28, 247, 0.15);
+  color: var(--purple-bright);
+}
+.teal {
+  background: rgba(12, 181, 188, 0.13);
+  color: #74e5df;
+}
+.orange {
+  background: rgba(255, 158, 86, 0.14);
+  color: #ffb37c;
+}
+.copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 3px;
+}
+.copy span,
+.copy small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.copy strong {
+  margin-top: 3px;
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+.copy small {
+  color: #86d5b0;
+}

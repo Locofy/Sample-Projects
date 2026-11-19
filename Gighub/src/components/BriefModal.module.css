@@ -1,0 +1,217 @@
+.overlay {
+  position: fixed;
+  z-index: 25;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(8, 7, 9, 0.82);
+  backdrop-filter: blur(10px);
+}
+.modal {
+  position: relative;
+  width: min(960px, 100%);
+  max-height: min(830px, calc(100vh - 48px));
+  overflow: auto;
+  padding: 42px 40px 38px;
+  border: 1px solid #4c4153;
+  border-radius: 15px;
+  background: #1b181e;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.52);
+}
+.close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.close:hover {
+  color: var(--purple-bright);
+}
+.modalIntro h2 {
+  margin: 11px 0 6px;
+  color: #fff;
+  font-size: clamp(29px, 4vw, 42px);
+  letter-spacing: -0.045em;
+}
+.modalIntro p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.modalBody {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-top: 38px;
+}
+.briefImage {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #302834;
+}
+.briefImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+.briefImage::after {
+  position: absolute;
+  inset: 42% 0 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+  content: "";
+}
+.imageCaption {
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-size: 11px;
+}
+.imageCaption svg {
+  color: #8ee1a6;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+}
+.form label > span:not(.upload) {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.form input:not([type="file"]),
+.form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  outline: 0;
+  background: #1a171d;
+  color: #fff;
+  font-size: 13px;
+  resize: vertical;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+.form input:not([type="file"]) {
+  min-height: 54px;
+  padding: 0 15px;
+}
+.form textarea {
+  min-height: 146px;
+  padding: 13px 15px;
+  line-height: 1.5;
+}
+.form input:not([type="file"]):focus,
+.form textarea:focus {
+  border-color: var(--purple);
+  background: #211c24;
+}
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #716676;
+}
+.uploadLabel {
+  gap: 5px !important;
+}
+.upload {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 12px 15px;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.upload:hover {
+  border-color: var(--purple-bright);
+  color: var(--purple-bright);
+}
+.upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  margin-top: auto;
+  border: 0;
+  border-radius: 8px;
+  background: var(--purple);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+.submit:hover {
+  background: var(--purple-bright);
+  transform: translateY(-2px);
+}
+@media (max-width: 700px) {
+  .overlay {
+    padding: 12px;
+  }
+  .modal {
+    max-height: calc(100vh - 24px);
+    padding: 34px 20px 22px;
+  }
+  .modalBody {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 26px;
+  }
+  .briefImage {
+    min-height: 170px;
+    max-height: 220px;
+  }
+  .briefImage img {
+    min-height: 220px;
+  }
+  .form label {
+    font-size: 18px;
+  }
+}

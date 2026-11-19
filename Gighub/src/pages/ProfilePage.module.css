@@ -1,0 +1,445 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at 80% 0%,
+    rgba(164, 28, 247, 0.1),
+    transparent 32rem
+  );
+}
+.content {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+.profileCard {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(33, 30, 36, 0.78);
+}
+.cover {
+  display: flex;
+  height: 130px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 14px 18px;
+  background: linear-gradient(110deg, #32113f, #7811aa 53%, #ad21f2);
+}
+.cover span {
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 10px;
+}
+.profileBody {
+  display: flex;
+  gap: 24px;
+  padding: 0 28px 25px;
+}
+.avatarWrap {
+  position: relative;
+  flex: 0 0 auto;
+  margin-top: -42px;
+}
+.avatarWrap img {
+  display: block;
+  width: 92px;
+  height: 92px;
+  border: 4px solid var(--surface);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface-2);
+}
+.online {
+  position: absolute;
+  right: -5px;
+  bottom: 6px;
+  padding: 4px 6px;
+  border: 2px solid var(--surface);
+  border-radius: 10px;
+  background: #78df9b;
+  color: #17221a;
+  font-size: 8px;
+  font-weight: 800;
+}
+.profileInfo {
+  flex: 1;
+  min-width: 0;
+  padding-top: 19px;
+}
+.profileTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.kicker {
+  color: #c084ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.profileTitle h1 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 9px 0 6px;
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: -0.05em;
+}
+.profileTitle h1 svg {
+  color: #83dfa0;
+}
+.profileTitle p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+.profileActions {
+  display: flex;
+  gap: 7px;
+}
+.profileActions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--soft);
+  font-size: 10px;
+  cursor: pointer;
+}
+.profileActions button:hover {
+  border-color: var(--purple);
+  color: #fff;
+}
+.profileActions button:last-child {
+  padding: 0 9px;
+}
+.profileStats {
+  display: flex;
+  gap: 28px;
+  margin-top: 24px;
+}
+.profileStats div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.profileStats strong {
+  color: #fff;
+  font-size: 18px;
+}
+.profileStats span {
+  color: var(--muted);
+  font-size: 9px;
+}
+.profileTabs {
+  display: flex;
+  gap: 21px;
+  margin-top: 27px;
+  border-bottom: 1px solid var(--border);
+}
+.profileTabs button {
+  position: relative;
+  padding: 0 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  cursor: pointer;
+}
+.profileTabs button:hover,
+.activeTab {
+  color: #fff !important;
+}
+.activeTab::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--purple);
+  content: "";
+}
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 21px;
+}
+.panel,
+.activityPanel,
+.preferencesPanel {
+  padding: 21px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: rgba(33, 30, 36, 0.68);
+}
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: var(--purple-bright);
+}
+.panelHeader h2 {
+  margin: 7px 0 0;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: -0.03em;
+}
+.workspaceCards {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.workspaceCards > button,
+.workspaceCards > a {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+.workspaceCards > button:hover,
+.workspaceCards > a:hover {
+  background: var(--surface-3);
+}
+.workspaceCards > span:nth-child(2),
+.workspaceCards > a > span:nth-child(2) {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+.workspaceCards strong {
+  font-size: 11px;
+}
+.workspaceCards small {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.4;
+}
+.cardIcon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(164, 28, 247, 0.14);
+  color: var(--purple-bright);
+}
+.workspaceCards > svg {
+  color: var(--muted);
+}
+.networkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.networkList > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.networkList img {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.networkList span {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+.networkList strong {
+  color: #fff;
+  font-size: 11px;
+}
+.networkList small {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.networkList svg {
+  color: #f7ca64;
+}
+.viewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--purple-bright);
+  font-size: 10px;
+  cursor: pointer;
+}
+.activityPanel,
+.preferencesPanel {
+  margin-top: 21px;
+}
+.activityRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border-top: 1px solid var(--surface-3);
+}
+.activityDot {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(164, 28, 247, 0.14);
+  color: var(--purple-bright);
+}
+.activityRow > span:nth-child(2) {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+.activityRow strong {
+  color: #fff;
+  font-size: 11px;
+}
+.activityRow small {
+  color: var(--muted);
+  font-size: 9px;
+}
+.activityRow > svg {
+  color: var(--muted);
+}
+.preferencesPanel label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid var(--surface-3);
+}
+.preferencesPanel label > span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.preferencesPanel strong {
+  color: #fff;
+  font-size: 11px;
+}
+.preferencesPanel small {
+  color: var(--muted);
+  font-size: 9px;
+}
+.preferencesPanel input {
+  width: 34px;
+  height: 19px;
+  accent-color: var(--purple);
+}
+.securityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.securityRow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.securityRow span svg {
+  color: #83dfa0;
+}
+.securityRow button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--purple-bright);
+  font-size: 10px;
+  cursor: pointer;
+}
+.securityRow button:hover {
+  color: #fff;
+}
+@media (max-width: 720px) {
+  .content {
+    width: min(100% - 32px, 1100px);
+  }
+  .profileBody {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+    padding-inline: 18px;
+  }
+  .avatarWrap {
+    margin-top: -44px;
+  }
+  .profileInfo {
+    width: 100%;
+    padding-top: 0;
+  }
+  .profileTitle {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .profileActions {
+    width: 100%;
+  }
+  .profileActions button:first-child {
+    flex: 1;
+    justify-content: center;
+  }
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+  .securityRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+}
+@media (max-width: 440px) {
+  .cover {
+    height: 105px;
+  }
+  .profileStats {
+    gap: 17px;
+  }
+  .profileStats strong {
+    font-size: 16px;
+  }
+  .profileStats span {
+    font-size: 8px;
+  }
+}

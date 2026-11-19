@@ -1,88 +1,54 @@
-.avatarImageIcon {
-  width: 60px;
-  position: relative;
-  border-radius: 50%;
-  height: 60px;
-  object-fit: cover;
+.reviewCard {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: rgba(33, 30, 36, 0.55);
 }
-.name {
-  align-self: stretch;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.location {
-  align-self: stretch;
-  position: relative;
-  font-size: 14px;
-  line-height: 130%;
-  color: #c5b7cc;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.contentContainer {
-  align-self: stretch;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2px;
-}
-.starIcon {
-  width: 12px;
-  position: relative;
-  height: 12px;
-}
-.rating {
-  position: relative;
-  line-height: 100%;
-}
-.ratingContainer {
-  border-radius: 16px;
-  background-color: #a41cf7;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 3px 5px;
-  gap: 3px;
-  font-size: 12px;
+.reviewCard + .reviewCard {
+  margin-top: 9px;
 }
 .topContainer {
-  align-self: stretch;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
+  gap: 9px;
+}
+.avatarImageIcon {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.contentContainer {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+.contentContainer strong {
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contentContainer span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.ratingContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: var(--purple);
+  color: #fff;
+  font-size: 9px;
 }
 .review {
-  align-self: stretch;
-  position: relative;
-  font-size: 16px;
-  line-height: 160%;
-}
-.reviewCard {
-  align-self: stretch;
-  border-radius: 8px;
-  border: 1px solid #443C4B;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 14px 14px 17px;
-  gap: 10px;
-  min-width: 280px;
-  text-align: left;
-  font-size: 18px;
-  color: #fff;
-  font-family: Roboto;
-}
-.reviewCard:hover {
-  border: 1px solid #a41cf7;
-  box-sizing: border-box;
+  margin: 12px 0 0;
+  color: var(--soft);
+  font-size: 11px;
+  line-height: 1.55;
 }

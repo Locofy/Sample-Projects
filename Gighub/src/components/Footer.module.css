@@ -1,73 +1,70 @@
-.logoWhiteIcon {
-  width: 110.5px;
-  position: relative;
-  height: 29.5px;
-  object-fit: cover;
-}
-.logocontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 20px 0 0;
-}
-.copyrightText {
-  position: relative;
-  line-height: 100%;
-}
-.facebookLinkIcon,
-.linkedinLinkIcon,
-.twitterLinkIcon,
-.youtubeLinkIcon {
-  width: 26px;
-  position: relative;
-  height: 27px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.facebookLinkIcon,
-.linkedinLinkIcon,
-.twitterLinkIcon {
-  height: 26px;
-}
-.facebookLinkIcon,
-.twitterLinkIcon {
-  width: 27px;
-}
-.facebookLinkIcon {
-  width: 26px;
-  object-fit: cover;
-}
-.socialMediaLinks {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 10.3px;
-}
-.container,
 .footer {
-  display: flex;
-  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid var(--surface-3);
+  background: #17151a;
 }
 .container {
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 20px;
-  box-sizing: border-box;
-  max-width: 1320px;
-  row-gap: 12px;
+  display: flex;
+  width: min(1320px, 100%);
+  min-height: 78px;
+  align-items: center;
+  gap: 28px;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
-.footer {
-  align-self: stretch;
-  border-top: 1px solid #2f2934;
-  flex-direction: column;
-  justify-content: center;
-  padding: 14px 0;
-  text-align: left;
-  font-size: 14px;
-  color: #6f6773;
-  font-family: Roboto;
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.logo img {
+  width: 100px;
+  height: auto;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.links a:hover {
+  color: #fff;
+}
+.copyright {
+  color: #716776;
+  font-size: 11px;
+}
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.socials img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 160ms ease;
+}
+.socials img:hover {
+  opacity: 1;
+}
+@media (max-width: 700px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 18px 16px;
+  }
+  .logo {
+    width: 100%;
+  }
+  .links {
+    order: 3;
+    width: 100%;
+    gap: 16px;
+  }
+  .copyright {
+    margin-left: auto;
+  }
 }

@@ -1,47 +1,43 @@
-import { FunctionComponent, useCallback } from "react";
+import { FunctionComponent } from "react";
+import { MapPin, Star } from "lucide-react";
+import { Designer, useGigHubStore } from "../store/useGigHubStore";
 import styles from "./DesignerCard.module.css";
 
 export type DesignerCardType = {
+  designer: Designer;
   className?: string;
-  image?: string;
-  userName?: string;
-  description?: string;
-  rating?: string;
-
 };
 
 const DesignerCard: FunctionComponent<DesignerCardType> = ({
+  designer,
   className = "",
-  image = "/image1@2x.png",
-  userName = "Name",
-  description = "Description",
-  rating = "0.0",
 }) => {
-  const onHireTextClick = useCallback(() => {
-    //TODO: add action
-  }, []);
+  const showToast = useGigHubStore((state) => state.showToast);
 
   return (
-    <div className={[styles.designerCard, className].join(" ")}>
-      <div className={styles.avatar}>
-        <img className={styles.imageIcon} alt="" src={image} />
-
-        <div className={styles.ratingcontainer}>
-          <img className={styles.icon} alt="" src="/icon.svg" />
-          <div className={styles.rating}>{rating}</div>
-
-        </div>
+    <article className={[styles.designerCard, className].join(" ")}>
+      <div className={styles.avatarWrap}>
+        <img className={styles.imageIcon} alt="" src={designer.avatar} />
+        <span className={styles.rating}>
+          <Star size={11} fill="currentColor" /> {designer.rating.toFixed(1)}
+        </span>
       </div>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.name}>{userName}</div>
-          <div className={styles.description}>{description}</div>
+          <strong>{designer.name}</strong>
+          <span className={styles.description}>{designer.description}</span>
+          <span className={styles.location}>
+            <MapPin size={11} /> {designer.location}
+          </span>
         </div>
-        <div className={styles.hire} onClick={onHireTextClick}>
+        <button
+          className={styles.hire}
+          onClick={() => showToast(`Invite sent to ${designer.name}`)}
+        >
           Hire
-        </div>
+        </button>
       </div>
-    </div>
+    </article>
   );
 };
 
